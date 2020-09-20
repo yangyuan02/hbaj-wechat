@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/auth/auth",
+    "pages/register/register",
+    
+    
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "海宝安检",
+    "navigationBarBackgroundColor": "#0f4fa8",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,9 @@
+<!--pages/auth/auth.wxml-->
+<view class="auth">
+<!-- <image src="./images/bg.jpg" style="width:{{windowWidth}}px"></image> -->
+<view class="buttton-opearte">
+  <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{!authorization}}">手机号一建登录</button>
+  <button type="primary" wx:elif="{{authorization}}" bindtap="toentryHome">进入海宝安检平台</button>
+</view>
+</view>
+

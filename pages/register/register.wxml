@@ -1,0 +1,21 @@
+<!--pages/auth/auth.wxml-->
+<view class="register">
+<view class="register-box">
+  <view class="tips">
+    <text>{{mobile}}用户,请输入密码完成登录</text>
+  </view>
+  <view class="password input">
+    <input type="password" placeholder="输入密码" value="{{password}}" bindinput="passwordChange"></input>
+  </view>
+  <view class="confirm-password input">
+    <input type="password" placeholder="再次输入密码" value="{{confirmPassword}}" bindinput="confirmPassword"></input>
+  </view>
+  <view class="buttton-opearte">
+    <button type="primary" bindtap="register">完成注册</button>
+  </view>
+</view>
+
+<!-- <image src="./images/bg.jpg" mode="scaleToFill"></image> -->
+
+</view>
+
