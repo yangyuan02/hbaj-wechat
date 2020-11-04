@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <!-- <web-view src="http://msa.vr2shipping.com/"></web-view>  -->
 
-<web-view src="{{src}}"></web-view> 
+<web-view src="{{src}}" bindmessage="bindGetMessage"></web-view> 
 
  <!-- <button type="primary" open-type="getUserInfo">获取用户信息</button> -->

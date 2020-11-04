@@ -8,7 +8,8 @@ Page({
     code:"",
     encryptedData:"",
     iv:"",
-    authorization:wx.getStorageSync('authorization')
+    authorization:wx.getStorageSync('authorization'),
+    baseURL:"", // h5 401活登录拦截待过来的参数
   },
   toentryHome(){
     this.toHome()
@@ -88,9 +89,10 @@ Page({
   toHome(){ // 登录信息存在跳转到登录页面
     const authorization = wx.getStorageSync('authorization');
     const userId = wx.getStorageSync('userId');
+    const baseURL = this.data.baseURL ? this.data.baseURL : '';
     if (authorization) {
       wx.navigateTo({
-        url: `/pages/index/index?authorization=${authorization}&userId=${userId}`,
+        url: `/pages/index/index?authorization=${authorization}&userId=${userId}&n=${baseURL}`,
         success:function(res) {
           console.log(res)
         }
@@ -120,9 +122,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const {isClearStore} = options;
+    console.log(options,'options-auth')
+    const {isClearStore, n} = options;
+    this.setData({
+      baseURL:""
+    })
     if (isClearStore === '1') {
       this.isClearStore()
+      if(n) {
+        this.setData({baseURL:n})
+      }
+      
     }
     this.getLogin()
     this.show()

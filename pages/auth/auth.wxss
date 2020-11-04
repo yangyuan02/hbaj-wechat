@@ -18,7 +18,7 @@ image{
 .auth{
   height: 100%;
   width: 100%;
-  background-image: url('https://msa_pc.vr2shipping.com/panostatic/enterprise/247/project/PROJECT_IMAGE_247_1599984913300_default.jpg');
+  background-image: url('https://msa_pc.vr2shipping.com/pano/image/backgroud_hb.jpg');
   background-size: cover;
   background-position: center center;
 }
